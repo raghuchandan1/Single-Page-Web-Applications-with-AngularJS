@@ -43,6 +43,7 @@
               Bought</button></li> -->
           <li ng-repeat="item in toBuy.toBuyItems">
             Buy {{ item.quantity }} of {{ item.name }}
+            <!-- {{testToBuy}} -->
           <button ng-click="toBuy.boughtItem($index);">Bought</button>
           </li>
         </ul>
@@ -56,6 +57,7 @@
           <!-- <li>Bought 10 cookies</li> -->
           <li ng-repeat="item in alreadyBought.alreadyBoughtItems">
             Bought {{ item.quantity }} of {{ item.name }}
+            <!-- {{testAlreadyBought}} -->
           </li>
         </ul>
         <div ng-if="alreadyBought.alreadyBoughtItems.length == 0" class="emptyMessage">Nothing bought yet.</div>

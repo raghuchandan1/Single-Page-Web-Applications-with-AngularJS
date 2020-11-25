@@ -70,6 +70,7 @@
     // Removed scope service as we want HTML to access data only using the controller object
     ToBuyController.$inject = ['ShoppingListCheckOffService'];
     function ToBuyController(ShoppingListCheckOffService){
+        var testToBuy = 10;
         var toBuy = this;
         
         toBuy.toBuyItems = ShoppingListCheckOffService.getToBuyItems();
@@ -92,8 +93,10 @@
     }
 
     // Removed scope service as we want HTML to access data only using the controller object
-    AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
-    function AlreadyBoughtController(ShoppingListCheckOffService){
+    // Only those variables attached to scope can be used in HTML directly
+    AlreadyBoughtController.$inject = ['$scope', 'ShoppingListCheckOffService'];
+    function AlreadyBoughtController($scope, ShoppingListCheckOffService){
+        // $scope.testAlreadyBought = 10;
         var alreadyBought = this;
         
         alreadyBought.alreadyBoughtItems = ShoppingListCheckOffService.getAlreadyBoughtItems();
