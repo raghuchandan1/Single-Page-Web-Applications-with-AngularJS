@@ -1,0 +1,12 @@
+<!-- <h3>Menu Items Containing {{ foundList.searchTerm }}</h3> -->
+<ul>
+    <li ng-repeat="item in foundList.items">
+        Name: {{ item.name }}
+        <br/>
+        Short Name: {{ item.short_name }}
+        <br/>
+        Description: {{ item.description }}
+        <button ng-click="foundList.onRemove({itemIndex: $index});">Don't want this one!</button>
+    </li>
+</ul>
+<div class="nothingFound">Nothing found</div>

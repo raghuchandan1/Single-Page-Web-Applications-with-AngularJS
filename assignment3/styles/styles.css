@@ -1,3 +1,6 @@
+body {
+  font-size: 1.2em;
+}
 h1 {
   margin-bottom: 30px;
 }
@@ -29,6 +32,15 @@ input[type="text"] {
   border-radius: 50%;
   width: 3em;
   height: 3em;
+}
+found-items {
+  clear: both;
+  float: left;
+}
+.nothingFound {
+  color: red;
+  font-weight: bold;
+  display: none;
 }
 @-webkit-keyframes load8 {
   0% {
