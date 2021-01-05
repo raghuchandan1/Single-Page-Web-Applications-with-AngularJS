@@ -17,9 +17,12 @@
         };
 
         service.getItemsForCategory = function(categoryShortName){
-            return $http.get(ApiBasePath + '/menu_items.json?category=' + categoryShortName).then( function(response){
+            return $http.get(ApiBasePath + '/menu_items.json?category=' + categoryShortName).then(function(response) {
                 return response.data;
             });
+            // .catch(function(error){
+            //     console.log("Error Occurred");
+            // });
         };
     }
 })();
