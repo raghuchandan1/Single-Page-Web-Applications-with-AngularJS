@@ -15,7 +15,7 @@
         })
         .state('categories', {
             url: '/categories',
-            templateUrl: 'src/menuapp/templates/categories-list.template.html',
+            templateUrl: 'src/menuapp/templates/main-categories-list.template.html',
             controller: 'CategoriesListController as clist',
             resolve: {
                 categories: ['MenuDataService', function(MenuDataService){
