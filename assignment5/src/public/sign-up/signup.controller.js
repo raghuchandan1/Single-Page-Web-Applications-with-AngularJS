@@ -20,6 +20,7 @@
             MenuService.getMenuItem(signUpCtrl.user.favDish)
             .then(function(response) {
                 // Saving user information in the service
+                signUpCtrl.user.itemDetails = response;
                 UserService.saveUser(signUpCtrl.user);
                 // console.log(signUpCtrl.user);
                 // console.log(UserService.getUser());

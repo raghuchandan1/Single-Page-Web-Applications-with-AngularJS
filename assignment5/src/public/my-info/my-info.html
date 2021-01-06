@@ -1,0 +1,50 @@
+<div class="container user-details">
+    <div class="text-center" ng-if="!myInfoCtrl.isNewUser">
+        <h2 class="text-center">Your Information</h2>
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>First Name</td>
+                    <td>{{ myInfoCtrl.user.firstName }}</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>{{ myInfoCtrl.user.lastName }}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{ myInfoCtrl.user.emailId }}</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>{{ myInfoCtrl.user.phoneNo }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Favourite Dish</b></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <menu-item menu-item="myInfoCtrl.user.itemDetails">
+        </menu-item> -->
+
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="menu-item-photo">
+                    <div>{{myInfoCtrl.user.itemDetails.short_name}}</div>
+                    <img class="img-responsive" width="250" height="150"
+                        ng-src="{{myInfoCtrl.ApiPath}}/images/{{myInfoCtrl.user.itemDetails.short_name}}.jpg"
+                        alt="{{$ctrl.menuItem.name}}">
+                </div>
+            </div>
+            <div class="menu-item-description col-sm-7 text-left">
+                <h3 class="menu-item-title">{{myInfoCtrl.user.itemDetails.name}}</h3>
+                <p class="menu-item-details">{{myInfoCtrl.user.itemDetails.description}}</p>
+            </div>
+        </div>        
+    </div>
+
+    <h3 class="text-center" ng-if="myInfoCtrl.isNewUser">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h3>
+
+</div>
