@@ -45,11 +45,17 @@
             <span ng-if="signUpForm.favDish.$error.required && signUpForm.favDish.$touched">
                 Favourite Dish cannot be empty
             </span>
+            <span ng-if="signUpCtrl.invalidItem">
+                No such menu number exists
+            </span>
         </div>
         
         <button class="btn btn-default" 
-            ng-disabled="signUpForm.$invalid" 
+            
             ng-click="signUpCtrl.submitForm()">Sign Up!</button>
+            ng-disabled="signUpForm.$invalid"
     </form>
+
+    <h3 class="text-center" ng-if="signUpCtrl.savedInfo">Your information has been saved</h3>
 
 </div>

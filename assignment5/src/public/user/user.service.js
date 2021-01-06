@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module('public')
-    .service('UserDataService', UserDataService);
+    .service('UserService', UserService);
 
-    function UserDataService() {
+    function UserService() {
         var service = this;
 
         service.user = {};
