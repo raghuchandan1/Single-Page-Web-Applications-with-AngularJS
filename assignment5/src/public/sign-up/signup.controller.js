@@ -26,7 +26,7 @@
 
                 signUpCtrl.invalidItem = false;
                 signUpCtrl.savedInfo = true;
-                console.log("Response in Ctrl: ", response);
+                // console.log("Response in Ctrl: ", response);
             })
             .catch(function(error){                
                 signUpCtrl.savedInfo = false;
